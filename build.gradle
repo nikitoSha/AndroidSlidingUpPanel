@@ -2,10 +2,11 @@
 buildscript {
   repositories {
     jcenter()
+      google()
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.2'
+    classpath 'com.android.tools.build:gradle:4.0.1'
   }
 }
 
@@ -22,10 +23,8 @@ allprojects {
       maven {
         url "https://maven.google.com"
       }
+        google()
     }
 }
 
-task wrapper(type: Wrapper) {
-  gradleVersion = '3.3'
-  distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
-}
+
